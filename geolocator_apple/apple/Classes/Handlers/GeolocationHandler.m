@@ -28,11 +28,6 @@
   self.errorHandler = errorHandler;
   self.resultHandler = resultHandler;
   
-  if (@available(iOS 9.0, macOS 10.14, *)) {
-    [self.locationManager requestLocation];
-    return;
-  }
-  
   [self startUpdatingLocationWithDesiredAccuracy:kCLLocationAccuracyBest
                                   distanceFilter:kCLDistanceFilterNone];
 }
